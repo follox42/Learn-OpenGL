@@ -11,6 +11,7 @@ This repository contains my personal experiments and firest approch with openGL 
 
 ## Steps
 ### Setup
+<<<<<<< HEAD
 1. **Install GLFW**  
     GLFW is a library that will take of creating a window in the os we are currently using so we can focus more on opengl than creating the right window for our os.
     But i'll probably learn how to create my own window with the api of the os later for linux and windows.
@@ -33,5 +34,10 @@ This repository contains my personal experiments and firest approch with openGL 
     and fill the triangle or do calculate the colors, it is useful with light, it runs for each pixels.  
 6. **Program**  
     Just to complete the shader part, when you create a shader you link the source and then link it to a program.  
+=======
+1. **Install GLFW.**  
+   GLFW is a library that will take of creating a window in the os we are currently using so we can focus more on opengl than creating the right window for our os.
+   But i'll probably learn how to create my own window with the api of the os later for linux and windows.
+>>>>>>> e5f91f47527bafeda956cd6c6cb1f27be399274d
 
 > This is a learning project. Some folders may be unfinished or experimental.

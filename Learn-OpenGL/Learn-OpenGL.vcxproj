@@ -158,6 +158,10 @@
     <ClCompile Include="src\01-Setup\FirstTriangle.cpp" />
     <ClCompile Include="src\01-Setup\InitializeGlew.cpp" />
     <ClCompile Include="src\02-SartingGlew\FirstGLTriangle.cpp" />
+    <ClCompile Include="src\03-CleanCode\res\src\Application.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\03-CleanCode\res\shaders\Basic.shader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
