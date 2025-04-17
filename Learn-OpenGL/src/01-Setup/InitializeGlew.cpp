@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-int main(void)
+int Glew(void)
 {
     GLFWwindow* window;
 

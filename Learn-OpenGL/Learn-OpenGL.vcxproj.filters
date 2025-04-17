@@ -21,7 +21,7 @@
     <ClCompile Include="src\01-Setup\InitializeGlew.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\02-StratGlew\FirstTriangle.cpp">
+    <ClCompile Include="src\02-SartingGlew\FirstGLTriangle.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
