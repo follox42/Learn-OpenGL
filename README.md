@@ -31,5 +31,7 @@ This repository contains my personal experiments and firest approch with openGL 
 5. **Shaders**  
     A shader is is like a program that run on the gpu. There is different type of shaders like the vertex shader that we'll calculate the position of our vertex positions, it runs for each vertex position. The fragment shader will render the pixel  
     and fill the triangle or do calculate the colors, it is useful with light, it runs for each pixels.  
-    
+6. **Program**  
+    Just to complete the shader part, when you create a shader you link the source and then link it to a program.  
+
 > This is a learning project. Some folders may be unfinished or experimental.
