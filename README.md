@@ -34,6 +34,10 @@ This repository contains my personal experiments and firest approch with openGL 
     and fill the triangle or do calculate the colors, it is useful with light, it runs for each pixels.  
 6. **Program**  
     Just to complete the shader part, when you create a shader you link the source and then link it to a program.  
+7. **Index**  
+    To avoid repeating ourself the triangles that are connecting, the 2 shared verteces. We don't want to store all the same verteces and use extra memory.  
+    For this we will juste store unique verteces so 4 for exemple for a rectangle. And we will use an index buffer to link the verteces together. And refer with their index instead of row verteces.  
+    And we will use the glDrawElements instead of glDrawArrays. An exemple: *positions[] = {vertex 0,vertex 1, vertex 2, vertex 3}* and then *indices[] = {0, 1, 2, 3, 0, 2}*.
 =======
 1. **Install GLFW.**  
    GLFW is a library that will take of creating a window in the os we are currently using so we can focus more on opengl than creating the right window for our os.
