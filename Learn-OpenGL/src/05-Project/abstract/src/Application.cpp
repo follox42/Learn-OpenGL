@@ -8,87 +8,7 @@
 #include "IndexBuffer.h"
 #include "VertexBuffer.h"
 #include "VertexArray.h"
-
-struct ShaderProgramSource
-{
-    std::string VertexSource;
-    std::string FragmentSource;
-};
-
-static ShaderProgramSource ParseShader(const std::string& filepath)
-{
-    std::ifstream stream(filepath);
-
-    enum class ShaderType
-    {
-        NONE = -1, VERTEX = 0, FRAGMENT = 1
-    };
-
-    std::string line;
-    std::stringstream ss[2];
-    ShaderType type = ShaderType::NONE;
-    while (getline(stream, line))
-    {
-        if (line.find("#shader") != std::string::npos)
-        {
-            if (line.find("vertex") != std::string::npos)
-            {
-                type = ShaderType::VERTEX;
-            }
-            else if (line.find("fragment") != std::string::npos)
-            {
-                type = ShaderType::FRAGMENT;
-            }
-        }
-        else {
-            ss[(int)type] << line << '\n';
-        }
-    }
-    return { ss[0].str(), ss[1].str() };
-}
-
-static unsigned int CompileShader(unsigned int type, const std::string& source)
-{
-    unsigned int id = glCreateShader(type);
-    const char* src = source.c_str();
-    glShaderSource(id, 1, &src, nullptr);
-    glCompileShader(id);
-
-    int status;
-    glGetShaderiv(id, GL_COMPILE_STATUS, &status);
-    if (status == GL_FALSE)
-    {
-        int length;
-        glGetShaderiv(id, GL_INFO_LOG_LENGTH, &length);
-        char* message = (char*)alloca(length * sizeof(char));
-        glGetShaderInfoLog(id, length, &length, message);
-
-        std::cout << "Error compiling shader with id: " << id << " and type: " << type << std::endl;
-        std::cout << message << std::endl;
-
-        glDeleteShader(id);
-        return 0;
-    }
-
-    return id;
-}
-
-static unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader)
-{
-    unsigned int program = glCreateProgram();
-    unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
-    unsigned int fs = CompileShader(GL_FRAGMENT_SHADER, fragmentShader);
-
-    glAttachShader(program, vs);
-    glAttachShader(program, fs);
-    glLinkProgram(program);
-    glValidateProgram(program);
-
-    glDeleteShader(vs);
-    glDeleteShader(fs);
-
-    return program;
-}
+#include "Shader.h"
 
 int main(void)
 {
@@ -146,15 +66,8 @@ int main(void)
         // Générer et lier le IBO (Index Buffer Object)
         IndexBuffer ib(indices, 6);
 
-        // Charger les shaders
-        ShaderProgramSource source = ParseShader("src/05-Project/abstract/res/shaders/Basic.shader");
-        std::cout << "VERTEX" << std::endl;
-        std::cout << source.VertexSource << std::endl;
-        std::cout << "FRAGMENT" << std::endl;
-        std::cout << source.FragmentSource << std::endl;
-
-        unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
-        GLCall(glUseProgram(shader));
+        Shader Shader("src/05-Project/abstract/res/shaders/Basic.shader");
+        Shader.Bind();
 
         struct Color {
             float R;
@@ -177,8 +90,12 @@ int main(void)
         float pas[4] = { 0.01f, 0.01f, 0.01f, 0.01f }; // Le pas pour ajuster la transition de couleur
 
         // Passer la couleur au shader
-        GLCall(int location = glGetUniformLocation(shader, "u_Color"));
-        ASSERT(location != -1);
+        Shader.SetUniforms4f("u_Color", color.R, color.G, color.B, color.A);
+
+        va.Unbind();
+        vb.Unbind();
+        ib.Unbind();
+        Shader.UnBind();
 
         pas[0] = (keyColors[keyColorIndex][0] - color.R) * precision;
         pas[1] = (keyColors[keyColorIndex][1] - color.G) * precision;
@@ -189,7 +106,7 @@ int main(void)
         while (!glfwWindowShouldClose(window))
         {
             /* Render here */
-            glClear(GL_COLOR_BUFFER_BIT);
+            GLCall(glClear(GL_COLOR_BUFFER_BIT));
 
             // Transitionner vers la couleur suivante
             color.R += pas[0];
@@ -211,7 +128,8 @@ int main(void)
             }
 
             // Mettre à jour la couleur dans le shader
-            GLCall(glUniform4f(location, color.R, color.G, color.B, color.A));
+            Shader.Bind();
+            Shader.SetUniforms4f("u_Color", color.R, color.G, color.B, color.A);
 
             // Lier le VAO et dessiner le carré avec les indices
 			va.Bind();
@@ -225,9 +143,6 @@ int main(void)
             /* Poll for and process events */
             GLCall(glfwPollEvents());
         }
-
-        // Nettoyer
-        glDeleteProgram(shader);
     }
 
     glfwTerminate();

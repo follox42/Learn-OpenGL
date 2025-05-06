@@ -163,6 +163,7 @@
     <ClCompile Include="src\05-Project\abstract\src\Application.cpp" />
     <ClCompile Include="src\05-Project\abstract\src\IndexBuffer.cpp" />
     <ClCompile Include="src\05-Project\abstract\src\Renderer.cpp" />
+    <ClCompile Include="src\05-Project\abstract\src\Shader.cpp" />
     <ClCompile Include="src\05-Project\abstract\src\VertexArray.cpp" />
     <ClCompile Include="src\05-Project\abstract\src\VertexBuffer.cpp" />
     <ClCompile Include="src\05-Project\colorWheel\ColorWheel.cpp" />
@@ -175,6 +176,7 @@
   <ItemGroup>
     <ClInclude Include="src\05-Project\abstract\src\IndexBuffer.h" />
     <ClInclude Include="src\05-Project\abstract\src\Renderer.h" />
+    <ClInclude Include="src\05-Project\abstract\src\Shader.h" />
     <ClInclude Include="src\05-Project\abstract\src\VertexArray.h" />
     <ClInclude Include="src\05-Project\abstract\src\VertexBuffer.h" />
     <ClInclude Include="src\05-Project\abstract\src\VertexBufferLayout.h" />
