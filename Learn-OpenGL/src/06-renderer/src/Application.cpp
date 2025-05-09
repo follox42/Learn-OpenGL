@@ -10,7 +10,7 @@
 #include "VertexArray.h"
 #include "Shader.h"
 
-int main(void)
+int renderer(void)
 {
     GLFWwindow* window;
 
@@ -66,7 +66,7 @@ int main(void)
         // Générer et lier le IBO (Index Buffer Object)
         IndexBuffer ib(indices, 6);
 
-        Shader Shader("src/05-Project/abstract/res/shaders/Basic.shader");
+        Shader Shader("src/06-renderer/res/shaders/Basic.shader");
         Shader.Bind();
 
         struct Color {

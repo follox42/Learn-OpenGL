@@ -30,51 +30,142 @@
     <ClCompile Include="src\04-Index\Index.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\05-Project\colorWheel\ColorWheel.cpp">
+    <ClCompile Include="src\08-Project\colorWheel\ColorWheel.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\05-Project\abstract\src\Renderer.cpp">
+    <ClCompile Include="src\05-abstract\src\Renderer.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\05-Project\abstract\src\Application.cpp">
+    <ClCompile Include="src\05-abstract\src\Application.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\05-Project\abstract\src\VertexBuffer.cpp">
+    <ClCompile Include="src\05-abstract\src\VertexBuffer.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\05-Project\abstract\src\IndexBuffer.cpp">
+    <ClCompile Include="src\05-abstract\src\IndexBuffer.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\05-Project\abstract\src\VertexArray.cpp">
+    <ClCompile Include="src\05-abstract\src\VertexArray.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\05-Project\abstract\src\Shader.cpp">
+    <ClCompile Include="src\05-abstract\src\Shader.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\06-renderer\src\Application.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\06-renderer\src\IndexBuffer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\06-renderer\src\Renderer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\06-renderer\src\Shader.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\06-renderer\src\VertexArray.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\06-renderer\src\VertexBuffer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\07-Texture\src\Application.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\07-Texture\src\IndexBuffer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\07-Texture\src\Renderer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\07-Texture\src\Shader.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\07-Texture\src\VertexArray.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\07-Texture\src\VertexBuffer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\07-Texture\src\vendor\stb_image\stb_image.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\07-Texture\src\Texture.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\03-CleanCode\res\shaders\Basic.shader" />
-    <None Include="src\05-Project\colorWheel\shaders\Basic.shader" />
-    <None Include="src\05-Project\abstract\res\shaders\Basic.shader" />
+    <None Include="src\08-Project\colorWheel\shaders\Basic.shader" />
+    <None Include="src\05-abstract\res\shaders\Basic.shader" />
+    <None Include="src\06-renderer\res\shaders\Basic.shader" />
+    <None Include="src\07-Texture\res\shaders\Basic.shader" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\05-Project\abstract\src\Renderer.h">
+    <ClInclude Include="src\05-abstract\src\Renderer.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\05-Project\abstract\src\VertexBuffer.h">
+    <ClInclude Include="src\05-abstract\src\VertexBuffer.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\05-Project\abstract\src\IndexBuffer.h">
+    <ClInclude Include="src\05-abstract\src\IndexBuffer.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\05-Project\abstract\src\VertexArray.h">
+    <ClInclude Include="src\05-abstract\src\VertexArray.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\05-Project\abstract\src\VertexBufferLayout.h">
+    <ClInclude Include="src\05-abstract\src\VertexBufferLayout.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\05-Project\abstract\src\Shader.h">
+    <ClInclude Include="src\05-abstract\src\Shader.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="src\06-renderer\src\IndexBuffer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\06-renderer\src\Renderer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\06-renderer\src\Shader.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\06-renderer\src\VertexArray.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\06-renderer\src\VertexBuffer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\06-renderer\src\VertexBufferLayout.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\07-Texture\src\IndexBuffer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\07-Texture\src\Renderer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\07-Texture\src\Shader.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\07-Texture\src\VertexArray.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\07-Texture\src\VertexBuffer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\07-Texture\src\VertexBufferLayout.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\07-Texture\src\vendor\stb_image\stb_image.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\07-Texture\src\Texture.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\GitHub\profil_github.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
   </ItemGroup>
 </Project>
