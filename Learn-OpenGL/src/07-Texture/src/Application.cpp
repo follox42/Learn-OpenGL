@@ -11,7 +11,7 @@
 #include "Shader.h"
 #include "Texture.h"
 
-int main(void)
+int texture(void)
 {
     GLFWwindow* window;
 
@@ -52,8 +52,8 @@ int main(void)
             2, 3, 0
         };
 
-        GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
         GLCall(glEnable(GL_BLEND));
+        GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 
         unsigned int vao;
         GLCall(glGenVertexArrays(1, &vao));

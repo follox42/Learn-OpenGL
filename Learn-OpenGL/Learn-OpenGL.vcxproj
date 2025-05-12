@@ -92,7 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\GLFW\include;$(SolutionDir)dependencies\glew-2.1.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\vendor;$(SolutionDir)dependencies\GLFW\include;$(SolutionDir)dependencies\glew-2.1.0\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -109,7 +109,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\GLFW\include;$(SolutionDir)dependencies\glew-2.1.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\vendor;$(SolutionDir)dependencies\GLFW\include;$(SolutionDir)dependencies\glew-2.1.0\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -174,6 +174,14 @@
     <ClCompile Include="src\07-Texture\src\vendor\stb_image\stb_image.cpp" />
     <ClCompile Include="src\07-Texture\src\VertexArray.cpp" />
     <ClCompile Include="src\07-Texture\src\VertexBuffer.cpp" />
+    <ClCompile Include="src\08-Texture\src\Application.cpp" />
+    <ClCompile Include="src\08-Texture\src\IndexBuffer.cpp" />
+    <ClCompile Include="src\08-Texture\src\Renderer.cpp" />
+    <ClCompile Include="src\08-Texture\src\Shader.cpp" />
+    <ClCompile Include="src\08-Texture\src\Texture.cpp" />
+    <ClCompile Include="src\08-Texture\src\vendor\stb_image\stb_image.cpp" />
+    <ClCompile Include="src\08-Texture\src\VertexArray.cpp" />
+    <ClCompile Include="src\08-Texture\src\VertexBuffer.cpp" />
     <ClCompile Include="src\08-Project\colorWheel\ColorWheel.cpp" />
     <ClCompile Include="src\06-renderer\src\Application.cpp" />
     <ClCompile Include="src\06-renderer\src\IndexBuffer.cpp" />
@@ -186,6 +194,7 @@
     <None Include="src\03-CleanCode\res\shaders\Basic.shader" />
     <None Include="src\05-abstract\res\shaders\Basic.shader" />
     <None Include="src\07-Texture\res\shaders\Basic.shader" />
+    <None Include="src\08-Texture\res\shaders\Basic.shader" />
     <None Include="src\08-Project\colorWheel\shaders\Basic.shader" />
     <None Include="src\06-renderer\res\shaders\Basic.shader" />
   </ItemGroup>
@@ -210,9 +219,14 @@
     <ClInclude Include="src\07-Texture\src\VertexArray.h" />
     <ClInclude Include="src\07-Texture\src\VertexBuffer.h" />
     <ClInclude Include="src\07-Texture\src\VertexBufferLayout.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\GitHub\profil_github.png" />
+    <ClInclude Include="src\08-Texture\src\IndexBuffer.h" />
+    <ClInclude Include="src\08-Texture\src\Renderer.h" />
+    <ClInclude Include="src\08-Texture\src\Shader.h" />
+    <ClInclude Include="src\08-Texture\src\Texture.h" />
+    <ClInclude Include="src\08-Texture\src\vendor\stb_image\stb_image.h" />
+    <ClInclude Include="src\08-Texture\src\VertexArray.h" />
+    <ClInclude Include="src\08-Texture\src\VertexBuffer.h" />
+    <ClInclude Include="src\08-Texture\src\VertexBufferLayout.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
